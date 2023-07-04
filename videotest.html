@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script src="js/aframe.min.js"></script>
+    <script src="js/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0px; overflow: hidden;">
+
+    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+
+        <a-assets>
+            <video id="video" src="vid.mp4" autoplay loop></video>
+        </a-assets>
+
+        <a-marker type="pattern" url="data/kanji.patt">
+            <a-entity position="0 0 0" rotation="0 0 0" scale="0.10 0.10 0.10">
+                <a-video src="#video" width="16" height="9"></a-video>
+            </a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>
