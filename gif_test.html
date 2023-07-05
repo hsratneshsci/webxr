@@ -1,0 +1,38 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<head>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script src="js/aframe.min.js"></script>
+    <script src="js/aframe-ar.js"></script>
+
+</head>
+
+
+<body style="margin: 0px; overflow: hidden;">
+
+    <a-scene embedded="" vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+
+        <a-assets>
+            <img id="gif" src="/giphy.gif" />
+        </a-assets>
+
+        <a-marker type="pattern" url="data/kanji.patt">
+            <a-plane position="0 10 0" rotation="-90 0 0" material="src: #gif;">
+            </a-plane>
+
+        </a-marker>
+
+
+        <a-entity camera=""></a-entity>
+
+    </a-scene>
+
+
+</body>
+
+</html>
