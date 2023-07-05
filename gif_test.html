@@ -17,15 +17,10 @@
 
     <a-scene embedded="" vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
 
-        <a-assets>
-            <img id="gif" src="/giphy.gif" />
-        </a-assets>
-
         <a-marker type="pattern" url="data/kanji.patt">
-            <a-plane position="0 10 0" rotation="-90 0 0" material="src: #gif;">
-            </a-plane>
-
+            <a-image src="/giphy.gif" width="1" height="1"></a-image>
         </a-marker>
+
 
 
         <a-entity camera=""></a-entity>
