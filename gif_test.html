@@ -1,4 +1,4 @@
-<!doctype HTML>
+<!DOCTYPE HTML>
 <html>
 
 <head>
@@ -9,24 +9,24 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
-
 </head>
-
 
 <body style="margin: 0px; overflow: hidden;">
 
-    <a-scene embedded="" vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+    <a-scene embedded vr-mode-ui="enabled: true;" arjs="debugUIEnabled: true;">
+
+        <a-assets>
+            <img id="gif" src="/giphy.gif" />
+        </a-assets>
 
         <a-marker type="pattern" url="data/kanji.patt">
-            <a-image src="/giphy.gif" width="1" height="1"></a-image>
+            <a-plane position="0 10 0" rotation="-90 0 0" material="src: #gif;" animation="property: rotation; dur: 2000; from: 0 0 0; to: 0 360 0; loop: true; easing: linear;">
+            </a-plane>
         </a-marker>
 
-
-
-        <a-entity camera=""></a-entity>
+        <a-entity camera></a-entity>
 
     </a-scene>
-
 
 </body>
 
