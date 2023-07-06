@@ -9,10 +9,10 @@
 
 <body style="margin: 0px; overflow: hidden;">
 
-    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;" gesture-detectorloading-screen="enabled: true;">
 
         <a-assets>
-            <video id="video" src="vid.mp4" autoplay loop></video>
+            <video id="video" src="vid.mp4" preload="auto" response-type="arraybuffer" loop crossorigin webkit-playsinline autoplay muted playsinline></video>
         </a-assets>
 
         <a-marker type="pattern" url="data/kanji.patt">
